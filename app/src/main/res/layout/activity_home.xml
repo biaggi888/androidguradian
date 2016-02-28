@@ -10,12 +10,8 @@
     >
 
   <TextView
-      android:layout_width="match_parent"
-      android:layout_height="58dp"
+      style="@style/TitleStyle"
       android:text="Function menu"
-      android:textSize="24sp"
-      android:background="#cc3cd9"
-      android:gravity="center"
       />
   <TextView
       android:layout_width="match_parent"

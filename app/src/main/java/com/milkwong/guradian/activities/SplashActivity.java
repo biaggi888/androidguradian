@@ -56,6 +56,7 @@ public class SplashActivity extends AppCompatActivity
     getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                             WindowManager.LayoutParams.FLAG_FULLSCREEN);
     setContentView(R.layout.activity_splash);
+    currentTime = System.currentTimeMillis();
     init();
     testInit();
   }
@@ -111,7 +112,6 @@ public class SplashActivity extends AppCompatActivity
           if (mVersionCode < versionCode) {
             msg.what = CODE_UPDATE_DIALOG;
           } else {
-            currentTime = System.currentTimeMillis();
             msg.what = CODE_ENTER_HOME;
           }
         } catch (IOException e) {
@@ -123,6 +123,14 @@ public class SplashActivity extends AppCompatActivity
         } finally {
           if (conn != null) {
             conn.disconnect();
+            long sleepTime = System.currentTimeMillis() - currentTime;
+            if (sleepTime < 3000) {
+              try {
+                Thread.sleep(3000 - sleepTime);
+              } catch (InterruptedException e) {
+                e.printStackTrace();
+              }
+            }
             mHander.sendMessage(msg);
           }
         }
@@ -245,14 +253,7 @@ public class SplashActivity extends AppCompatActivity
    * Go to home activity
    */
   private void enterHome() {
-    long sleepTime = System.currentTimeMillis() - currentTime;
-    if (sleepTime < 3000) {
-      try {
-        Thread.sleep(3000 - sleepTime);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-    }
+
     Intent intent = new Intent(this, HomeActivity.class);
     startActivity(intent);
     finish();
