@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashActivity"
+    android:background="@drawable/splash"
+    >
+
+  <TextView
+      android:id="@+id/edTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Android Safe Guradian"
+      android:textSize="32sp"
+      android:textColor="#29c926"
+      android:shadowColor="#fff"
+      android:shadowRadius="5"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="167dp"
+      />
+
+  <TextView
+      android:id="@+id/tvVersion"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Version : 0.1"
+      android:textSize="18sp"
+      android:textColor="#fff"
+      android:shadowColor="#000"
+      android:shadowRadius="5"
+      android:shadowDx="0"
+      android:shadowDy="0"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      />
+  <TextView
+      android:id="@+id/tvProgress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"
+      android:visibility="gone"
+      android:textSize="18sp"
+      android:textColor="#fff"
+      android:shadowColor="#000"
+      android:shadowRadius="5"
+      android:shadowDx="0"
+      android:shadowDy="0"
+      />
+
+</RelativeLayout>
+

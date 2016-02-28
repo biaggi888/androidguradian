@@ -1,4 +1,4 @@
-package com.milkwong.androidguradian;
+package com.milkwong.guradian;
 
 import org.junit.Test;
 

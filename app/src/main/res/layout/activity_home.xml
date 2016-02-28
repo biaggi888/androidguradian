@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.milkwong.guradian.activities.HomeActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="58dp"
+      android:text="Function menu"
+      android:textSize="24sp"
+      android:background="#cc3cd9"
+      android:gravity="center"
+      />
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:text="TextView 有了手机卫士, 腰不酸了,腿不疼了,走路也有劲了, 手机卫士太NB了"
+      android:ellipsize="marquee"
+      android:focusable="true"
+      android:focusableInTouchMode="true"
+      android:singleLine="true"
+      />
+  <com.milkwong.guradian.view.FocusedTextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:text="FocusedTextView 有了手机卫士, 腰不酸了,腿不疼了,走路也有劲了, 手机卫士太NB了"
+      android:ellipsize="marquee"
+      android:singleLine="true"
+      />
+  <GridView
+      android:id="@+id/gvNainFun"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:layout_margin="2dp"
+      android:padding="3dp"
+      android:numColumns="3"
+      android:verticalSpacing="20dp"
+      />
+
+</LinearLayout>
